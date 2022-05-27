@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <style>
+    /* Navbar */
+    body {
+      margin: 0;
+    }
+
+
+    .topnav {
+      overflow: hidden;
+      background-color: beige;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+
+    .topnav a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      border-bottom: 2px solid rgba(0, 47, 255, 0.616);
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: rgba(0, 47, 255, 0.616);
+      color: white;
+    }
+
+    .navitem {
+      float: right;
+    }
+
+    .navitem a.active2 {
+      background-color: rgba(251, 255, 0, 0.856);
+      color: black;
+      font-weight: bold;
+    }
+
+    /* body */
+    .home-img img {
+      width: 1350px;
+      height: 500px;
+    }
+
+
+    /* footer-header */
+    span {
+      content: "\2709";
+    }
+
+    .footer-header {
+      white-space: nowrap;
+    }
+
+    .footer-header p {
+      font-size: x-large;
+      display: inline-block;
+    }
+
+    .footer-header button {
+      color: white;
+      font-weight: bold;
+      background-color: #04AA6D;
+      border: 1px solid rgb(14, 119, 14);
+      border-radius: 5px;
+      display: inline-block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    #btn {
+      color: lightseagreen;
+      display: inline-block;
+      background: none;
+      border: none;
+      font-size: 25px;
+      font-weight: 100;
+      text-decoration: underline;
+    }
+
+    #btn:hover {
+      color: rgb(10, 112, 107);
+      display: inline-block;
+      background: none;
+      border: none;
+      font-size: 25px;
+    }
+
+    #txt {
+      padding-left: 500px;
+      display: inline-block;
+    }
+
+    /* footer */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .footer-gray {
+      background-color: #232f3a;
+      width: 100%;
+    }
+
+    .footer-custom {
+      color: white;
+      font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+      box-sizing: border-box;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    .footer-custom:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .footer-lists:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .ftr-hdr {
+      color: white;
+      font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+      margin: 2em 0 0;
+      font-weight: bold;
+
+    }
+
+    @media only screen and (min-width: 768px) {
+      .ftr-hdr {
+        font-size: 18px;
+      }
+    }
+
+    .footer-list-wrap {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+
+    }
+
+    @media only screen and (min-width: 568px) {
+      .footer-list-wrap {
+        width: 33.3333%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .footer-list-wrap {
+        width: 25%;
+      }
+    }
+
+    .ftr-links-sub {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ftr-links-sub:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .ftr-links-sub li {
+      display: block;
+      list-style-type: none;
+      margin: 0;
+      padding: 3px 0;
+      color: #888;
+      font: normal normal 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      text-transform: uppercase;
+    }
+
+    .footer-custom a,
+    .footer-custom a:link,
+    .footer-custom a:visited,
+    .ftr-links-sub li .link {
+      text-decoration: none;
+      color: white;
+      padding: 5px 0;
+      display: block;
+    }
+
+    .footer-custom .footer-legal a {
+      display: inline;
+    }
+
+    .footer-custom a:hover,
+    .footer-custom a:active,
+    .ftr-links-sub li .link:hover {
+      text-decoration: underline;
+      color: #888;
+      cursor: pointer;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      .footer-custom a,
+      .footer-custom a:link,
+      .footer-custom a:visited,
+      .ftr-links-sub li .link {
+        padding: 0;
+      }
+    }
+
+    /* BEGIN SOCIAL STYLES*/
+
+    .footer-social {
+      text-align: center;
+    }
+
+    .footer-social ul {
+      padding: 0;
+      display: inline-block;
+      list-style-type: none;
+    }
+
+    .footer-social ul:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+
+    @media only screen and (min-width: 768px) {
+      .footer-lists {
+        width: 100%;
+      }
+
+      .footer-social {
+        width: 45%;
+        margin-left: 5%;
+        float: left;
+        text-align: left;
+      }
+    }
+
+    @media only screen and (min-width: 1008px) {
+      .footer-lists {
+        width: 66.6666%;
+        float: left;
+      }
+
+      .footer-social {
+        width: 33.3333%;
+        float: right;
+        margin-left: 0;
+      }
+    }
+
+    .footer-legal {
+      padding: 15px 0 0;
+      clear: left;
+    }
+
+    .footer-social li {
+      float: left;
+      font-size: 40px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 5px;
+
+
+    }
+
+    .footer-social a {
+      border-radius: 10px;
+      font-size: 40px;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: orangered;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-pinterest {
+      background: #cb2027;
+      color: white;
+    }
+  </style>
+  <div class="topnav">
+    <a class="active" href="home-page.html">HomeStars</a>
+    <a href="browse-categories.html">Browse Categories</a>
+    <a href="blog.html">Blog</a>
+    <a href="write-a-review.html">Write A Review</a>
+
+    <div class="navitem">
+      <a href="login.html">Log In</a>
+      <a href="sign-up.html">Sign Up</a>
+      <a class="active2" href="join-homestars.html">ARE YOU A HOME PRO?</a>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="home-img">
+    <img src="https://www.pexels.com/photo/three-white-ceramic-pots-with-green-leaf-plants-near-open-notebook-with-click-pen-on-top-796602/" alt="homepage">
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="footer-gray">
+
+      <div class="footer-custom">
+
+        <div class="footer-header">
+
+          <p>
+            <span>&#9993;</span>
+            Get Exclusive Tips & Advice
+          </p>
+          <button>
+            Sign Up
+          </button>
+
+          <p id="txt">Need Help?</p>
+          <button id="btn">
+            Contact Us
+          </button>
+
+          <hr>
+        </div>
+
+        <div class="footer-lists">
+
+
+          <div class="footer-list-wrap">
+            <h6 class="ftr-hdr">Homeowners</h6>
+            <ul class="ftr-links-sub">
+              <li><a href="#">Browse Categories</a></li>
+              <li><a href="#">Browse Tasks</a></li>
+              <li><a href="#">Write A Review</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Star Reviewers</a></li>
+              <li><a href="#">Homeowner FAQ</a></li>
+              <li><a href="#">Review Guidelines</a></li>
+              <li><a href="#">Homeowner Trust</a></li>
+              <li><a href="#">Cost Guides</a></li>
+              <li><a href="#">Reno Report</a></li>
+            </ul>
+          </div>
+          <div class="footer-list-wrap">
+            <h6 class="ftr-hdr">Home Professionl</h6>
+            <ul class="ftr-links-sub">
+              <li><a href="#">Join HomeStars</a></li>
+              <li><a href="#">Brand Builder</a></li>
+              <li><a href="#">Home Professionl FAQ</a></li>
+              <li><a href="#">Building Trust</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Home Professionl Terms</a></li>
+              <li><a href="#">Pro Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-list-wrap">
+            <h6 class="ftr-hdr">HomeStars</h6>
+            <ul class="ftr-links-sub">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Press &amp; Announcements</a></li>
+              <li><a href="#">Careers at HomeStars</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Ciies</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-social">
+          <h6 class="ftr-hdr">Follow Us</h6>
+          <ul>
+            <li>
+              <a href="#" class="fa fa-instagram"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-facebook"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-twitter"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-linkedin"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-pinterest"></a>
+            </li>
+          </ul>
+          <p>© 2022 HomeStars, Inc., a HomeAdvisor company.</p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>

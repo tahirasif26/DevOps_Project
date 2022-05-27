@@ -4,7 +4,7 @@ const {PORT = 3000 } = process.env
 console.log('Port',PORT)
 
 app.get("/",function (req,res){
-    res.send("Hello World !");
+    res.sendFile(__dirname+'/index.html');
     });
 
 app.listen(PORT,()=>
